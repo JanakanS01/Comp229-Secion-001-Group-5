@@ -1,0 +1,87 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/mainNav.ejs %>
+
+    <!--<h1>Welcome to <%= title %></h1>-->
+
+    <main>
+        <div>
+          <h1><%= title %></h1>     
+        </div>
+
+        <!-- Content for the create page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="surveyNameTextField">Survey Name</label>
+                    <input type="text" class="form-control"
+                    id="surveyNameTextField"
+                    placeholder="Enter the Survey Title"
+                    name="surveyName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ownerTextField">Survey Owner</label>
+                    <input type="text" class="form-control"
+                    id="ownerTextField"
+                    placeholder="Enter the Survey Owner"
+                    name="surveyOwner" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="question1">Question 1</label>
+                    <input type="text" id="question1" placeholder="Enter Question">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="question2">Question 2</label>
+                    <input type="text" id="question2" placeholder="Enter Question">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="question3">Question 3</label>
+                    <input type="text" id="question3" placeholder="Enter Question">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="question4">Question 4</label>
+                    <input type="text" id="question4" placeholder="Enter Question">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="question5">Question 5</label>
+                    <input type="text" id="question5" placeholder="Enter Question">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="descriptionTextArea">Created Date</label>
+                    <input type="date" id="createdDate" >
+                </div>
+                <br>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/book-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+        <style>
+            h1{
+              text-align: center;
+              color: green;
+              font-size: 75px;
+            }
+        </style>
+    </main>
+
+<%- include partials/footer.ejs %>
